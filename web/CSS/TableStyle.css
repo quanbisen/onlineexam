@@ -1,0 +1,42 @@
+table {
+    line-height: 1.5em;
+    font-size: 13px;
+    font-family: verdana,arial,sans-serif;
+    color:#333333;
+    border-width: 1px;
+    border-color: #a9c6c9;
+    border-collapse: collapse;
+}
+table th {
+    text-align: left;
+    border-width: 1px;
+
+    border-style: solid;
+    border-color: #a9c6c9;
+}
+table th:hover {
+    background-color:#edede8;
+
+}
+table td {
+    padding: 0px;
+    overflow: auto;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #a9c6c9;
+}
+table tr:hover {
+    background-color:#edede8;
+}
+.oddrow{
+    background-color:#f2f2f2;
+}
+.evenrow{
+    background-color:#f8f7f7;
+}
+form{
+    margin-block-end: 0em;
+}
+.studentinfo{
+    position: relative;
+}

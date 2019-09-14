@@ -1,0 +1,78 @@
+body{
+    background-color: #F2F2F2;
+    margin: 0px;
+}
+.title{
+    display: block;
+    font-size: 1.5em;
+    font-weight: bold;
+    height: 40px;
+    padding-top: 10px;
+    padding-left: 15px;
+    background-color: #A2D8E4;
+    opacity: 0.8;
+}
+.userinfo{
+    float: right;
+    margin-right: 10px;
+    font-size: 14px;
+    font-family: "Microsoft YaHei UI";
+    padding-top: 5px;
+}
+.centerContainer{
+    display: flex;
+}
+.leftBar{
+    overflow: auto;
+    height: 863px;
+    width: 250px;
+    background-color: #F5F5DC;
+    border-right: 1px solid #DCDCDC;
+    padding-top: 30px;
+}
+.leftBar ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    line-height: 3em;
+}
+.leftBar a {
+    display: block;
+    width: 220px;
+    text-align: center;
+    text-decoration: none;
+}
+.negative a:hover {
+    background-color: #E6E6FA;
+}
+.main{
+    overflow: auto;
+    background-color: #F2F2F2;
+    height: 863px;
+    width: 100%;
+}
+.studentinfo{
+    overflow: auto;
+    width: 100%;
+    height: 450px;
+}
+.addstudent{
+    overflow: auto;
+    width: 100%;
+    height: 410px;
+}
+h4{
+    padding-left: 30px;
+}
+.footer{
+    position: absolute;
+    bottom: 0px;
+    font-weight: bold;
+    font-size: 0.83em;
+    width: 100%;
+    height: 21px;
+    text-align: center;
+    padding-top: 10px;
+    background-color: #A2D8E4;
+    opacity: 0.8;
+}

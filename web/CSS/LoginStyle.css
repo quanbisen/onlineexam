@@ -1,0 +1,72 @@
+body{
+    background-image: url("../Images/Background.jpg");
+    background-repeat: round;
+    margin: 0px;
+}
+.title{
+    display: block;
+    font-size: 1.5em;
+    font-weight: bold;
+    height: 40px;
+    padding-top: 10px;
+    padding-left: 15px;
+    background-color: #A2D8E4;
+    opacity: 0.8;
+}
+form{
+    margin: auto;
+}
+table{
+    border-spacing: 5px;
+}
+input{
+    height: 25px;
+}
+.main{
+    height: 500px;
+    display: flex;
+}
+.info{
+    font-size: 18px;
+    font-weight: bold;
+}
+strong{
+    font-style: italic;
+}
+img{
+    position: absolute;
+}
+span{
+    position: relative;
+    left: 20px;
+}
+.radio{
+    width: 15px;
+    height: 15px;
+    margin: 3px 3px 3px 5px;
+}
+.button{
+    color: white;
+    background-color: forestgreen;
+    border-width: 0px;
+    border-radius: 3px;
+    margin-right: 15px;
+    width: 50px;
+    opacity: 0.8;
+}
+.button:hover{
+    cursor: pointer;
+    opacity: 1;
+}
+.footer{
+    position: absolute;
+    bottom: 0px;
+    font-weight: bold;
+    font-size: 0.83em;
+    width: 100%;
+    height: 21px;
+    text-align: center;
+    padding-top: 10px;
+    background-color: #A2D8E4;
+    opacity: 0.8;
+}
