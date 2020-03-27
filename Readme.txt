@@ -22,7 +22,6 @@ OnlineExam项目数据库配置说明：
 
 
 OnlineExam项目文件说明：
-lib文件夹：IntelliJ Web项目运行所需要的一些包，我还把Tomcat目录下需要用到的.jar文件放到这里了；
 
 src文件夹:项目的源文件.java，里面有Bean(模型)、Servlet(控制器)和Util(工具)三个package包；
 
