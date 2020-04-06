@@ -11,7 +11,7 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <html>
 <head>
-    <link rel="shortcut icon"  href="Images/ExamTitleIcon.ico">
+    <link rel="shortcut icon"  href="image/ExamTitleIcon.ico">
     <title>Handle Login</title>
 </head>
 <body>
@@ -20,7 +20,7 @@
     <c:set var="user" scope="session" value="${param.username}"></c:set>  <!--取出登录功能页面输入的信息-->
     <c:set var="password" scope="session" value="${param.password}"></c:set>
     <c:set var="role" scope="session" value="${param.role}"></c:set>
-    <sql:setDataSource var="onlineexam" scope="session" driver="com.mysql.jdbc.Driver" user="${initParam.user}" password="${initParam.password}" url="jdbc:mysql://127.0.0.1:3306/onlineexam?characterEncoding=utf8"></sql:setDataSource>
+    <sql:setDataSource var="onlineexam" scope="session" driver="${initParam.driver}" user="${initParam.user}" password="${initParam.password}" url="${initParam.url}"></sql:setDataSource>
     <c:choose>
         <c:when test="${role eq '管理者'}">  <!--如果角色是管理者角色，查询数据库服务器记录管理者角色的数据表administrators-->
             <sql:query var="administrators" scope="session" dataSource="${onlineexam}" >
@@ -29,7 +29,20 @@
                 <sql:param value="${password}"></sql:param>
             </sql:query>
             <c:if test="${administrators.rowCount>=1}"><!--行数大于等于1，证明存在id和password符合的记录，重定向到管理者角色首页-->
-                <c:redirect url="/Administrator/AdministratorIndex.jsp"></c:redirect>
+                <c:redirect url="/administrator/AdministratorIndex.jsp"></c:redirect>
+            </c:if>
+            <c:if test="${administrators.rowCount<1}"><!--行数小于1，证明账号不存在，重定向到登录功能页面-->
+                <c:redirect url="Login.jsp?message=fail"></c:redirect>
+            </c:if>
+        </c:when>
+        <c:when test="${role eq '教师'}">  <!--如果角色是管理者角色，查询数据库服务器记录管理者角色的数据表administrators-->
+            <sql:query var="teachers" scope="session" dataSource="${onlineexam}" >
+                select * from teachers where id=? and password=?;
+                <sql:param value="${user}"></sql:param>
+                <sql:param value="${password}"></sql:param>
+            </sql:query>
+            <c:if test="${teachers.rowCount>=1}"><!--行数大于等于1，证明存在id和password符合的记录，重定向到管理者角色首页-->
+                <c:redirect url="/teacher/TeacherIndex.jsp"></c:redirect>
             </c:if>
             <c:if test="${administrators.rowCount<1}"><!--行数小于1，证明账号不存在，重定向到登录功能页面-->
                 <c:redirect url="Login.jsp?message=fail"></c:redirect>
@@ -37,12 +50,12 @@
         </c:when>
         <c:when test="${role eq '考生'}"> <!--如果角色是考生角色，查询数据库服务器记录考生角色的数据表users-->
             <c:out value="${role}"></c:out>
-            <sql:query var="users" scope="session"  dataSource="${onlineexam}" sql="select * from users where id=? and password=?;">
+            <sql:query var="users" scope="session" dataSource="${onlineexam}" sql="select * from users where id=? and password=?;">
                 <sql:param value="${user}"></sql:param>
                 <sql:param value="${password}"></sql:param>
             </sql:query>
             <c:if test="${users.rowCount>=1}"><!--行数大于等于1，证明存在id和password符合的记录，重定向到考生角色首页-->
-                <c:redirect url="/Student/StudentIndex.jsp"></c:redirect>
+                <c:redirect url="/student/StudentIndex.jsp"></c:redirect>
             </c:if>
             <c:if test="${users.rowCount<1}">
                 <c:redirect url="Login.jsp?message=fail"></c:redirect><!--行数小于1，证明账号不存在，重定向到登录功能页面-->

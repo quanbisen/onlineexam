@@ -1,8 +1,7 @@
-package Servlet;
+package servlet;
 
-import Util.ReadExcelUtil;
-import Util.UploadFileUtil;
-
+import util.ReadExcelUtil;
+import util.UploadFileUtil;
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -35,7 +34,7 @@ public class HandleReleaseQuestions extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        String TARGET_DIRECTORY="ExcelFile";        //上传文件的目录*
+        String TARGET_DIRECTORY="excelfile";        //上传文件的目录*
         int UPLOAD_MAX_FILE_SIZE = 1024 * 1024 * 25;    //最大文件上传值
         int MEMORY_THRESHOLD = 1024 * 1024 * 10;        //临时内存临界值
         String uploadPath = this.getServletContext().getRealPath("/")+ File.separator+TARGET_DIRECTORY;
@@ -80,8 +79,7 @@ public class HandleReleaseQuestions extends HttpServlet {
                 //存储完成，把上传的excel文件删除
                 File excelFile = new File(excelFilePath);
                 if (excelFile.exists()){
-                    boolean b = excelFile.exists();
-                    b = excelFile.delete();
+                    excelFile.delete();
                 }
                 message = "success";
             }

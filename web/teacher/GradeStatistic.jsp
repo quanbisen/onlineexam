@@ -10,10 +10,10 @@
 <%@ taglib prefix="sql" uri="http://java.sun.com/jsp/jstl/sql" %>
 <html>
 <head>
-    <link rel="shortcut icon"  href="../Images/ExamTitleIcon.ico">
+    <link rel="shortcut icon"  href="../image/ExamTitleIcon.ico">
     <title>This is GradeStatistic</title>
-    <link href="../CSS/ManagementMainStyle.css" type="text/css" rel="stylesheet">
-    <link href="../CSS/TableStyle.css" type="text/css" rel="stylesheet">
+    <link href="../css/ManagementMainStyle.css" type="text/css" rel="stylesheet">
+    <link href="../css/TableStyle.css" type="text/css" rel="stylesheet">
     <script type="text/javascript">
         function onLoad() {
             //为奇数、偶数的表格行添加className
@@ -34,12 +34,12 @@
 <body onload="onLoad();">
 
 <div class="title">在线考试系统
-    <span class="userinfo">用户名：<c:out value="${user}"></c:out>(<c:out value="${role}"></c:out>)&nbsp;&nbsp;&nbsp;&nbsp;<a href="ModifyPassword.jsp">修改密码</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="handleAdministratorExit">退出</a> </span>
+    <span class="userinfo">用户名：<c:out value="${user}"></c:out>(<c:out value="${role}"></c:out>)&nbsp;&nbsp;&nbsp;&nbsp;<a href="ModifyPassword.jsp">修改密码</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="handleTeacherExit">退出</a> </span>
 </div>
 <div class="centerContainer">
     <div class="leftBar">
         <ul>
-            <li class="negative"><a href="AdministratorIndex.jsp">首页导航</a></li>
+            <li class="negative"><a href="TeacherIndex.jsp">首页导航</a></li>
             <li><a style="background-color: #c8c8dc" href="GradeStatistic.jsp">成绩统计</a></li>
             <li class="negative"><a href="QuestionsManagement.jsp">试题管理</a></li>
             <li class="negative"><a href="StudentManagement.jsp">考生管理</a></li>
@@ -110,6 +110,9 @@
                 <c:forEach var="row" items="${exam_finished_info.rows}">
                     <tr><td><c:out value="${row.id}"></c:out></td><td><c:out value="${row.name}"></c:out></td><td><c:out value="${row.exam_description}"></c:out></td><td><c:out value="${row.total_score}"></c:out></td><td><c:out value="${row.obtain_score}"></c:out></td></tr>
                 </c:forEach>
+                <c:if test="${not empty param.exam_description_id}">
+                    <tr><td colspan="5"><form action="handleExportStudentScore" method="post"><input name="exam_description_id" type="hidden" value="<c:out value='${param.exam_description_id}'></c:out>"><input type="submit" name="submit" value="导出已考考生成绩"></form></td></tr>
+                </c:if>
             </table>
             <h4 style="text-align: center;">未参加考试的考生</h4>
             <table class="table" style="margin: 20px auto;text-align: center;">

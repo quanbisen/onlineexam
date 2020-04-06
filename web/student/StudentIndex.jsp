@@ -9,9 +9,9 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
-    <link rel="shortcut icon"  href="../Images/ExamTitleIcon.ico">
+    <link rel="shortcut icon"  href="../image/ExamTitleIcon.ico">
     <title>This is StudentIndex</title>
-    <link href="../CSS/ManagementMainStyle.css" type="text/css" rel="stylesheet">
+    <link href="../css/ManagementMainStyle.css" type="text/css" rel="stylesheet">
 </head>
 <body>
 <div class="title">在线考试系统

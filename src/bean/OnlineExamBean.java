@@ -1,4 +1,4 @@
-package Bean;
+package bean;
 /*****
  * 在线考试试题部分信息存储的数据模型
  * **/

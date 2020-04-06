@@ -1,4 +1,4 @@
-<%@ page import="Bean.OnlineExamBean" %><%--
+<%@ page import="bean.OnlineExamBean" %><%--
   Created by IntelliJ IDEA.
   User: 17691
   Date: 6/7/2019
@@ -11,9 +11,9 @@
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <html>
 <head>
-    <link rel="shortcut icon"  href="../Images/ExamTitleIcon.ico">
+    <link rel="shortcut icon"  href="../image/ExamTitleIcon.ico">
     <title>This is OnlineExam</title>
-    <link href="../CSS/ManagementMainStyle.css" type="text/css" rel="stylesheet">
+    <link href="../css/ManagementMainStyle.css" type="text/css" rel="stylesheet">
 </head>
 <style type="text/css">
     .main-box{

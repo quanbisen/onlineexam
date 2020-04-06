@@ -10,10 +10,10 @@
 <%@ taglib prefix="sql" uri="http://java.sun.com/jsp/jstl/sql" %>
 <html>
 <head>
-    <link rel="shortcut icon"  href="../Images/ExamTitleIcon.ico">
+    <link rel="shortcut icon"  href="../image/ExamTitleIcon.ico">
     <title>This is MyExam</title>
-    <link href="../CSS/ManagementMainStyle.css" type="text/css" rel="stylesheet">
-    <link href="../CSS/TableStyle.css" type="text/css" rel="stylesheet">
+    <link href="../css/ManagementMainStyle.css" type="text/css" rel="stylesheet">
+    <link href="../css/TableStyle.css" type="text/css" rel="stylesheet">
 </head>
 <script type="text/javascript">
     function onLoad() {

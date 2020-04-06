@@ -1,6 +1,6 @@
-package Servlet;
+package servlet;
 
-import Bean.OnlineExamBean;
+import bean.OnlineExamBean;
 
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;

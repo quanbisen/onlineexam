@@ -1,6 +1,6 @@
-package Servlet;
+package servlet;
 
-import Util.UploadFileUtil;
+import util.UploadFileUtil;
 
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
@@ -33,7 +33,7 @@ public class HandleUploadImage extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         HttpSession session = request.getSession();
-        String TARGET_DIRECTORY="Images";   /**上传文件的目录**/
+        String TARGET_DIRECTORY="image";   /**上传文件的目录**/
         String uploadPath = this.getServletContext().getRealPath("/")+ File.separator+TARGET_DIRECTORY;
         String message="";
         String fileName =UploadFileUtil.uploadFile(uploadPath,request);  //调用自定义的工具类处理文件上传

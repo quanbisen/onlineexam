@@ -10,10 +10,10 @@
 <%@ taglib prefix="sql" uri="http://java.sun.com/jsp/jstl/sql" %>
 <html>
 <head>
-    <link rel="shortcut icon"  href="../Images/ExamTitleIcon.ico">
+    <link rel="shortcut icon"  href="../image/ExamTitleIcon.ico">
     <title>This is ModifyPassword</title>
-    <link href="../CSS/ManagementMainStyle.css" type="text/css" rel="stylesheet">
-    <link href="../CSS/ModifyPasswordFormStyle.css" type="text/css" rel="stylesheet">
+    <link href="../css/ManagementMainStyle.css" type="text/css" rel="stylesheet">
+    <link href="../css/ModifyPasswordFormStyle.css" type="text/css" rel="stylesheet">
     <script type="text/javascript">
         function onLoad() {
             var message ='<%=request.getParameter("message")%>';
@@ -53,10 +53,8 @@
 <div class="centerContainer">
     <div class="leftBar">
         <ul>
-            <li class="negative"><a href="AdministratorIndex.jsp">首页导航</a></li>
-            <li class="negative"><a href="GradeStatistic.jsp">成绩统计</a></li>
-            <li class="negative"><a href="QuestionsManagement.jsp">试题管理</a></li>
-            <li class="negative"><a href="StudentManagement.jsp">考生管理</a></li>
+            <li><a style="background-color: #c8c8dc" href="AdministratorIndex.jsp">首页导航</a></li>
+            <li class="negative"><a href="TeacherManagement.jsp">教师管理</a></li>
         </ul>
     </div>
     <div class="main">
@@ -72,11 +70,11 @@
                             </c:forEach>
                         </c:when>
                     </c:choose>
-                        <td width="90px"><img src="../Images/UserPasswordIcon.png" width="20px" height="20px"><span>新&nbsp&nbsp密&nbsp&nbsp码：</span></td>
+                        <td width="90px"><img src="../image/UserPasswordIcon.png" width="20px" height="20px"><span>新&nbsp&nbsp密&nbsp&nbsp码：</span></td>
                         <td><input id="password" type="password" name="password" value="<c:out value="password"></c:out>"></td>
                     </tr>
                     <tr>
-                        <td><img src="../Images/UserPasswordIcon.png" width="20px" height="20px"><span>确定密码：</span></td>
+                        <td><img src="../image/UserPasswordIcon.png" width="20px" height="20px"><span>确定密码：</span></td>
                         <td><input id="repeat_password" type="password" name="repeat_password" value="<c:out value="password"></c:out>"></td>
                     </tr>
                     <tr>

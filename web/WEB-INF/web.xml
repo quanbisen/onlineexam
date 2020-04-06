@@ -13,62 +13,87 @@
     </context-param>
     <context-param>
         <param-name>url</param-name>
-        <param-value>jdbc:mysql://127.0.0.1:3306/onlineexam?characterEncoding=utf-8</param-value>
+        <param-value>jdbc:mysql://114.116.240.232:3306/onlineexam?characterEncoding=utf-8</param-value>
     </context-param>
+    <context-param>
+        <param-name>driver</param-name>
+        <param-value>com.mysql.jdbc.Driver</param-value>
+    </context-param>
+
     
     <servlet>
         <servlet-name>handleExit</servlet-name>
-        <servlet-class>Servlet.ExitServlet</servlet-class>
+        <servlet-class>servlet.ExitServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>handleExit</servlet-name>
-        <url-pattern>/Administrator/handleAdministratorExit</url-pattern>
-        <url-pattern>/Student/handleStudentExit</url-pattern>
+        <url-pattern>/administrator/handleAdministratorExit</url-pattern>
+        <url-pattern>/teacher/handleTeacherExit</url-pattern>
+        <url-pattern>/student/handleStudentExit</url-pattern>
     </servlet-mapping>
     
     <servlet>
         <servlet-name>ModifyPassword</servlet-name>
-        <servlet-class>Servlet.ModifyPassword</servlet-class>
+        <servlet-class>servlet.ModifyPassword</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>ModifyPassword</servlet-name>
-        <url-pattern>/Administrator/ModifyPassword</url-pattern>
-        <url-pattern>/Student/ModifyPassword</url-pattern>
+        <url-pattern>/administrator/ModifyPassword</url-pattern>
+        <url-pattern>/teacher/ModifyPassword</url-pattern>
+        <url-pattern>/student/ModifyPassword</url-pattern>
     </servlet-mapping>
     
     <servlet>
         <servlet-name>handleChoose</servlet-name>
-        <servlet-class>Servlet.HandleChoose</servlet-class>
+        <servlet-class>servlet.HandleChoose</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>handleChoose</servlet-name>
-        <url-pattern>/Student/handleChoose</url-pattern>
+        <url-pattern>/student/handleChoose</url-pattern>
     </servlet-mapping>
     
     <servlet>
         <servlet-name>handleScore</servlet-name>
-        <servlet-class>Servlet.HandleScore</servlet-class>
+        <servlet-class>servlet.HandleScore</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>handleScore</servlet-name>
-        <url-pattern>/Student/handleScore</url-pattern>
+        <url-pattern>/student/handleScore</url-pattern>
     </servlet-mapping>
     
     <servlet>
         <servlet-name>HandleUploadImage</servlet-name>
-        <servlet-class>Servlet.HandleUploadImage</servlet-class>
+        <servlet-class>servlet.HandleUploadImage</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>HandleUploadImage</servlet-name>
-        <url-pattern>/Student/HandleUploadImage</url-pattern>
+        <url-pattern>/student/HandleUploadImage</url-pattern>
     </servlet-mapping>
     
     <servlet>
         <servlet-name>handleReleaseQuestions</servlet-name>
-        <servlet-class>Servlet.HandleReleaseQuestions</servlet-class>
+        <servlet-class>servlet.HandleReleaseQuestions</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>handleReleaseQuestions</servlet-name>
-        <url-pattern>/Administrator/handleReleaseQuestions</url-pattern>
+        <url-pattern>/teacher/handleReleaseQuestions</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>handleImportStudents</servlet-name>
+        <servlet-class>servlet.HandleImportStudents</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>handleImportStudents</servlet-name>
+        <url-pattern>/teacher/handleImportStudents</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>handleExportStudentScore</servlet-name>
+        <servlet-class>servlet.HandleExportStudentScore</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>handleExportStudentScore</servlet-name>
+        <url-pattern>/teacher/handleExportStudentScore</url-pattern>
     </servlet-mapping>
 </web-app>
