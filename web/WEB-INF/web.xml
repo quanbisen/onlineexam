@@ -20,7 +20,6 @@
         <param-value>com.mysql.jdbc.Driver</param-value>
     </context-param>
 
-    
     <servlet>
         <servlet-name>handleExit</servlet-name>
         <servlet-class>servlet.ExitServlet</servlet-class>
