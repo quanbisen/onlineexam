@@ -34,16 +34,16 @@
             var currentpage = '<%=request.getParameter("currentpage")%>'
             if (message == 'rectifysuccess') {
                 alert('修改成功');
-                window.location.href = 'TeacherManagement.jsp?currentpage=' + currentpage;
+                window.location.href = 'StudentManagement.jsp?currentpage=' + currentpage;
             } else if (message == 'rectifyerror') {
                 alert('修改失败，检查考生ID是否已经存在');
-                window.location.href = 'TeacherManagement.jsp?currentpage=' + currentpage;
+                window.location.href = 'StudentManagement.jsp?currentpage=' + currentpage;
             } else if (message == 'addstudentsuccess') {
                 alert('添加成功');
-                window.location.href = 'TeacherManagement.jsp?currentpage=' + currentpage;
+                window.location.href = 'StudentManagement.jsp?currentpage=' + currentpage;
             } else if (message == 'addstudenterror') {
                 alert('添加失败，检查考生ID是否已经存在');
-                window.location.href = 'TeacherManagement.jsp?currentpage=' + currentpage;
+                window.location.href = 'StudentManagement.jsp?currentpage=' + currentpage;
             }
 
             //用作提交给Servlet后重定向的信息提示，提示发布试题是否成功
