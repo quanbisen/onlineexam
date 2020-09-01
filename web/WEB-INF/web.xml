@@ -20,6 +20,10 @@
         <param-value>com.mysql.jdbc.Driver</param-value>
     </context-param>
 
+    <welcome-file-list>
+         <welcome-file>Login.jsp</welcome-file>
+    </welcome-file-list>
+    
     <servlet>
         <servlet-name>handleExit</servlet-name>
         <servlet-class>servlet.ExitServlet</servlet-class>
